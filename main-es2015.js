@@ -792,7 +792,7 @@ class LoginService {
         this.loginObservable = this.loginSource.asObservable();
     }
     login(username, password) {
-        let url = "http://magentatrader4-api.azurewebsites.net/token";
+        let url = "https://magentatrader4-api.azurewebsites.net/token";
         let body = "username=" + username + "&password=" + password + "&grant_type=password";
         let options = { headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/x-www-form-urlencoded' }) };
         this.httpClient.post(url, body, options).subscribe(response => {
@@ -1012,12 +1012,6 @@ class HeaderComponent {
             setTimeout(() => {
                 this.router.navigate(['/']);
             }, 500);
-            this.snackBar.open("Logout successful.", '', {
-                duration: 3000,
-                horizontalPosition: this.snackBarHorizontalPosition,
-                verticalPosition: this.snackBarVerticalPosition,
-                panelClass: ["green-snackbar"]
-            });
         }
     }
     logout() {

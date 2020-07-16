@@ -1518,7 +1518,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function login(username, password) {
           var _this4 = this;
 
-          var url = "http://magentatrader4-api.azurewebsites.net/token";
+          var url = "https://magentatrader4-api.azurewebsites.net/token";
           var body = "username=" + username + "&password=" + password + "&grant_type=password";
           var options = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
@@ -1966,12 +1966,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             setTimeout(function () {
               _this7.router.navigate(['/']);
             }, 500);
-            this.snackBar.open("Logout successful.", '', {
-              duration: 3000,
-              horizontalPosition: this.snackBarHorizontalPosition,
-              verticalPosition: this.snackBarVerticalPosition,
-              panelClass: ["green-snackbar"]
-            });
           }
         }
       }, {
